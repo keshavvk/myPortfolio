@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="/home.css">
+
+    <link rel="icon" href="/title.png" type="image/x-icon">
+
+    <title>Portfolio | Contact</title>
+</head>
+
+<body>
+    <%- include("partials/navBar") %>
+        <div class="container">
+            <div id="leftProfile" class="col col-lg-3 col-md-12 col-sm-12 m-4">
+                <%- include("partials/leftProfile") %>
+            </div>
+            <div id="contact_content" class="col col-lg-8 col-md-12 col-sm-12 m-4">
+                <div class="row p-3 pt-3">
+                    <h2>CONTACT INFORMATION</h2>
+                </div>
+
+                <div id="contactGrid" class="row justify-content-center">
+                    <div class="row justify-content-center holds-the-iframe">
+                        <h3 class=" m-2">Location:</h3>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.4423066632235!2d72.99196161489351!3d20.28195131822783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0cb62b1de0757%3A0xe795fd24d46264a6!2sYogi%20Darshan%202nd!5e0!3m2!1sen!2sin!4v1633826200590!5m2!1sen!2sin"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> style="border:0; height: 75%; width: 95%;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="row justify-content-center contactGridItem">
+                        <div class="m-2 p-2">
+                            Phone Number:
+                        </div>
+                        <div class="m-2 p-2">
+                            +91 9725099224
+                        </div>
+                        <div class="m-2 p-2">
+                            Personal Email:
+                        </div>
+                        <div class="m-2 p-2">
+                            kanitroyalkar265@gmail.com
+                        </div>
+                        <div class="m-2 p-2">
+                            Work Email:
+                        </div>
+                        <div class="m-2 p-2">
+                            kanitroyalkar165@gmail.com </div>
+                        <div class="m-2 p-2">
+                            Telegram:
+                        </div>
+                        <div class="m-2 p-2">
+                            keshav kharate
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!--Dummy for bottom spacing-->
+                <div>
+                    <div class="row m-1 p-3">
+                        <a class="btn btn-primary" style="display: block; opacity: 0;" download>Download CV (.pdf)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>

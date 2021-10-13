@@ -1,0 +1,190 @@
+<div id="textCarousel" class="row justify-content-center pt-5 pb-5 mb-3 align-content-center">
+    <h1>
+        <<b><span style="color: yellow;">code</span></b>> I'm
+            <span class="txt-rotate" data-period="2000" data-rotate='[ "Keshav Kharate.", "a MCA Student.", "a web developer." ]'></span>
+            <<b><span style="color: yellow;">/code</span></b>>
+    </h1>
+</div>
+<div class="row justify-content-start m-2">
+    <h1>MY SKILLS</h1>
+</div><br>
+
+<h5>Programming Languages</h5>
+<div id="skills-lang" class="row skills m-4">
+    <div>
+        <h6>Python</h6>
+        <div class="progress1">
+            <div class="progress-value1" style="width: 90%"><span>90%</span></div>
+        </div>
+    </div>
+    <div>
+        <h6>Javascript</h6>
+        <div class="progress1">
+            <div class="progress-value1" style="width: 80%"><span>80%</span></div>
+        </div>
+    </div>
+    <div>
+        <h6 class="mt-2">Java</h6>
+        <div class="progress1">
+            <div class="progress-value1" style="width: 75%"><span>80%</span></div>
+        </div>
+    </div>
+    <div>
+        <h6 class="mt-2">C++</h6>
+        <div class="progress1">
+            <div class="progress-value1" style="width: 35%"><span>40%</span></div>
+        </div>
+    </div>
+</div>
+
+<h5>Database</h5>
+<div id="skills-db" class="row skills m-4">
+    <div>
+        <h6>Oracle SQL</h6>
+        <div class="progress1">
+            <div class="progress-value1 progress-value2" style="width: 80%"><span>80%</span></div>
+        </div>
+    </div>
+</div>
+
+<h5>Web Development</h5>
+<div id="skills-web" class="row skills m-4">
+    <div>
+        <h6>HTML</h6>
+        <div class="progress1">
+            <div class="progress-value1 progress-value3" style="width: 95%"><span>95%</span></div>
+        </div>
+    </div>
+    <div>
+        <h6>CSS</h6>
+        <div class="progress1">
+            <div class="progress-value1 progress-value3" style="width: 90%"><span>90%</span></div>
+        </div>
+    </div>
+    <div>
+        <h6 class="mt-2">Bootstrap</h6>
+        <div class="progress1">
+            <div class="progress-value1 progress-value3" style="width: 85%"><span>85%</span></div>
+        </div>
+    </div>
+</div>
+
+<h5>Version Control</h5>
+<div id="skills-version" class="row skills m-4">
+    <div>
+        <h6>Git</h6>
+        <div class="progress1">
+            <div class="progress-value1 progress-value4" style="width: 97%"><span>97%</span></div>
+        </div>
+    </div>
+</div>
+
+<h5>Operating System</h5>
+<div id="skills-os" class="row skills m-4">
+    <div>
+        <h6>Linux</h6>
+        <div class="progress1">
+            <div class="progress-value1 progress-value5" style="width: 85%"><span>85%</span></div>
+        </div>
+    </div>
+    <div>
+        <h6>Android</h6>
+        <div class="progress1">
+            <div class="progress-value1 progress-value5" style="width: 75%"><span>75%</span></div>
+        </div>
+    </div>
+</div>
+<h5>Data Structures and Algorithms</h5>
+<div id="skills-os" class="row m-4">
+    <div>
+        <div class="progress1">
+            <div class="progress-value1 progress-value6" style="width: 35%"><span>35%</span></div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="DUMMY_FOR_BOTTOM_SPACING">
+    <div class="row m-1 p-3">
+        <a class="btn btn-primary" style="display: block; opacity: 0;" download>Download CV (.pdf)</a>
+    </div>
+</div>
+
+
+
+<script>
+    //Text Carousel Section
+
+
+    var TxtRotate = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtRotate.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+        var that = this;
+        var delta = 300 - Math.random() * 100;
+
+        if (this.isDeleting) {
+            delta /= 2;
+        }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+        }
+
+        setTimeout(function() {
+            that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('txt-rotate');
+        for (var i = 0; i < elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-rotate');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+                new TxtRotate(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+        document.body.appendChild(css);
+    };
+
+
+
+    //My Skills Section
+</script>

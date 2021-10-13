@@ -1,0 +1,27 @@
+{
+    "name": "personalportfolio",
+    "version": "1.0.0",
+    "description": "My Personal Portfolio",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/parimalingle1805/personalPortfolio.git"
+    },
+    "author": "Parimal Ingle",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/parimalingle1805/personalPortfolio/issues"
+    },
+    "homepage": "https://github.com/parimalingle1805/personalPortfolio#readme",
+    "dependencies": {
+        "ejs": "^3.1.6",
+        "express": "^4.17.1",
+        "nodemon": "^2.0.7",
+        "particle.js": "^1.0.7",
+        "progressbar.js": "^1.1.0"
+    }
+}

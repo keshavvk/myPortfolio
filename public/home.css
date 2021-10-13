@@ -1,0 +1,371 @@
+/* Background */
+
+body {
+    color: white;
+    background: radial-gradient(circle, #0c0c3a, #000000);
+}
+
+
+/* Navigation Bar section */
+
+.navBg {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.navMar {
+    margin-left: 1em;
+    margin-right: 5em;
+}
+
+
+/* Left Profile Section */
+
+#leftProfile {
+    background: rgba(255, 255, 255, 0.2);
+    height: max-content;
+    position: fixed;
+    top: auto;
+    left: 0%;
+    overflow-y: scroll;
+    max-height: 100%;
+    min-height: 100%;
+    border-radius: 10px;
+}
+
+ ::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+#leftPhoto {
+    height: 6em;
+    width: auto;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 1em;
+}
+
+#leftPhoto:hover {
+    opacity: 0.7;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+/* Modal Content (Image) */
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 70%;
+    max-width: 700px;
+}
+
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+
+/* Animation - Zoom in the Modal */
+
+.modal-content,
+#caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* 100% Image Width on Smaller Screens */
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+p,
+h5,
+h6 {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+
+h6 {
+    font-size: 80%;
+}
+
+
+/* Language Proficiency ring section*/
+
+.ring {
+    height: 100%;
+    margin: 1em;
+    background: -moz-radial-gradient(center, ellipse, #400, #100);
+    background: radial-gradient(center, ellipse, #400, #100);
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%;
+    grid-template-rows: 80% 20%;
+    justify-content: center;
+    width: 100%;
+}
+
+.svg {
+    margin-left: 0.2em;
+}
+
+
+/* Social Links Section */
+
+.socials {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+.social {
+    height: 1.5em;
+}
+
+.usernm {
+    color: white;
+    font-size: 75%;
+}
+
+
+/* Content */
+
+#content,
+#project_content,
+#certification_content,
+#work_content,
+#contact_content {
+    background: rgba(255, 255, 255, 0.2);
+    height: max-content;
+    position: fixed;
+    z-index: 0;
+    top: auto;
+    left: 27%;
+    overflow-y: scroll;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width:1080px) {
+    #leftProfile {
+        position: relative;
+        width: 100%;
+    }
+    #content,
+    #project_content,
+    #certification_content,
+    #work_content,
+    #contact_content {
+        position: relative;
+        left: 0%;
+        width: 100%;
+    }
+}
+
+
+/* Text Carousel section */
+
+#textCarousel {
+    font-size: 2.9em;
+    color: white;
+    font-family: monospace;
+    text-align: center;
+    background: url(/img4.jpg);
+    border-radius: 10px;
+}
+
+
+/* My Skills Sections */
+
+.skills {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.progress1 {
+    background: rgba(0, 0, 0, 0.1);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    padding: 0 5px;
+    display: flex;
+    height: 20px;
+    width: 100%;
+}
+
+.progress-value1 {
+    animation: load 2s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    height: 15px;
+    width: 0;
+    font-weight: 700;
+}
+
+
+/*Languages*/
+
+.progress-value1 {
+    background: #d8a71f;
+}
+
+
+/* Database*/
+
+.progress-value2 {
+    background: #ffa735;
+}
+
+
+/* Web Development */
+
+.progress-value3 {
+    background: #2f9637;
+}
+
+
+/* Version Control */
+
+.progress-value4 {
+    background: #537bff;
+}
+
+
+/* OS */
+
+.progress-value5 {
+    background: #c1dd45;
+}
+
+
+/* DS Algo */
+
+.progress-value6 {
+    background: #ff0505;
+}
+
+.progress-value1 span {
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    display: block;
+}
+
+@keyframes load {
+    0% {
+        width: 0;
+    }
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.card {
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.card-body {
+    display: grid;
+    grid-template-rows: 82% 18%;
+}
+
+
+/* My certifications sections */
+
+.certificates {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#certification_content,
+#work_content {
+    scroll-behavior: smooth;
+}
+
+.headAnchors {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+}
+
+
+/* Contact Section */
+
+#contactGrid {
+    display: grid;
+    grid-template-columns: 40% 50%;
+    grid-template-rows: 23em;
+}
+
+.holds-the-iframe {
+    background: url(./loading.gif) center center no-repeat;
+}
+
+.contactGridItem {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
+    justify-content: center;
+}

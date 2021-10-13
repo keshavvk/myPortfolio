@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="/home.css">
+
+    <link rel="icon" href="/title.png" type="image/x-icon">
+
+    <title>Portfolio | Projects</title>
+</head>
+
+<body>
+    <%- include("partials/navBar") %>
+        <div class="conatiner">
+            <div id="leftProfile" class="col col-lg-3 col-md-12 col-sm-12 m-4">
+                <%- include("partials/leftProfile") %>
+            </div>
+            <div id="project_content" class="col col-lg-8 col-md-12 col-sm-12 m-4">
+                <div class="row p-3 pt-3">
+                    <h1>MY PROJECTS</h1>
+                </div>
+                <div id="projects" class="row p-3 justify-content-center">
+                    <div class="card m-2" style="width: 95%;">
+                        <div class="card-body">
+                            <div>
+                                <h5 style="color: black;" class="card-title mb-3">Personal Portfolio</h5>
+                                <h6 style="text-transform: none;" class="card-subtitle mb-2 text-muted">HTML, CSS, JS, NodeJs, ExpressJs, EJS, Bootstrap</h6>
+                                <p style="color: black; text-transform: none; text-align: left;" class="card-text">
+                                    Built a Personal Portfolio website.
+                                    <a href="https://keshavvk.github.io/" class=" btn btn-primary mt-4" target="_blank">Visit site</a>
+
+                                </p>
+                            </div>
+                            <div>
+                                <a href="https://github.com/keshavvk/My-portfolio" class="card-link btn btn-success" target="_blank">Github Repo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card m-2" style="width: 95%;">
+                        <div class="card-body">
+                            <div>
+                                <h5 style="color: black;" class="card-title mb-3">Tic-Tac-Toe</h5>
+                                <h6 style="text-transform: none;" class="card-subtitle mb-4 text-muted">HTML, CSS, JS
+                                </h6>
+                                <p style="color: black; text-transform: none; text-align: left;" class="card-text">
+                                    A 2-player tic tac toe game.<br>
+                                    <a href="https://keshavvk.github.io/" class=" btn btn-primary mt-4" target="_blank">Visit site</a>
+                                </p>
+                            </div>
+                            <div>
+
+                                <a href="https://github.com/keshavvk/tic-tak-toe" class=" btn btn-success" target="_blank">Github Repo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card m-2" style="width: 95%;">
+                        <div class="card-body">
+                            <div>
+                                <h5 style="color: black;" class="card-title mb-3">Travellers.com</h5>
+                                <h6 style="text-transform: none;" class="card-subtitle mb-5 text-muted">HTML, CSS, JS
+                                </h6>
+                                <p style="color: black; text-transform: none; text-align: left;" class="card-text">
+                                    <br>
+                                    <a href="https://keshavvk.github.io/" class=" btn btn-primary" target="_blank">Visit site</a>
+
+                                </p>
+                            </div>
+                            <div>
+                                <a href="https://github.com/keshavvk/trave3lers.com" class=" btn btn-success" target="_blank">Github Repo</a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--Dummy for bottom spacing-->
+                    <div class="card m-2 " style="width: 18rem; opacity: 0; ">
+                        <div class="card-body ">
+
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="# " class="card-link ">Card link</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js " integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0 " crossorigin="anonymous "></script>
+
+
+</body>
+
+</html>
